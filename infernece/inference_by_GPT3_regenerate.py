@@ -24,7 +24,7 @@ if __name__=='__main__':
     for i in range(len(perfix_list)):
         tokenizer_list.append(GPT3TokenizerWarper([perfix_list[i], postfix_list[i]]))
 
-    model = GPT3Warper("/cluster/home/zzhiheng/cogito/openai_key/openai_key2.txt", f"gpt3_result_setup_{setup}_short_large_regenerate2.jsonl")
+    model = GPT3Warper("path2OpenAIKey", f"gpt3_result_setup_{setup}_short_large_regenerate2.jsonl")
 
     dataset = load_from_disk('./yelp_large_test_new')
     #ic(dataset[:]['text'])
