@@ -23,9 +23,9 @@ def load_jsonl_list(path):
             continue
     return jsonl_list
 
-list1 = load_jsonl_list('/cluster/project/sachan/zhiheng/causal_prompting/GPT3/gpt3_result_setup_2_short_large_new.jsonl')
+list1 = load_jsonl_list('./causal_prompting/GPT3/gpt3_result_setup_2_short_large_new.jsonl')
 print(len(list1))
-output_path = '/cluster/project/sachan/zhiheng/causal_prompting/GPT3/gpt3_result_setup_2_short_large.npy'
+output_path = '...'
 #a = np.array([[[i, ''] for i in list1+list2]])
 #np.save(output_path, a)
 

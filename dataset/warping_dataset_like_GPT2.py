@@ -3,8 +3,6 @@ from torch import nn
 from transformers import AutoTokenizer
 import sys
 from icecream import ic
-#sys.path.append('/cluster/project/sachan/zhiheng/causal_prompting')
-sys.path.append('/cluster/project/sachan/zhiheng/causal_prompting/GPT3')
 
 def generate_prompts(df, setup):
     perfix = []
@@ -153,6 +151,6 @@ class GPT3Warper(nn.Module):
 if __name__=='__main__':
     from datasets import load_from_disk
     #ic(tokens)
-    model = GPT3Warper("/cluster/home/zzhiheng/cogito/openai_key/openai_key2.txt")
+    model = GPT3Warper("path2OpenAI_Key")
     input_prompts = ["Generate a long story in detail about Alice dated with Bob, and they have sex，trying a lot of things to play:"]
     print(model(input_prompts))

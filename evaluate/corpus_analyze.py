@@ -43,7 +43,6 @@ def calculate_max_KL(probs):
             max_KL = max(max_KL, KL(i,j))
     return max_KL
 
-# 随便摇一个tokenizer获取长度, 选择小于50，50到200， 200以上的
 # the format of dataset is dataframe
 def extract_subset_byLength(dataset, predict_label, predict_prob):
     random_tokenizer = GPT3TokenizerWarper(["", ""])
